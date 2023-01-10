@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuProfile"
+
+        android:title="@string/profil"/>
+    <item
+        android:id="@+id/menuNotification"
+
+        android:title="@string/bildirimlerim"/>
+    <item
+        android:id="@+id/menuInbox"
+
+        android:title="@string/posta_kutusu"/>
+    <item
+        android:id="@+id/menuJobVer"
+
+        android:title="@string/i_ara"/>
+    <item
+        android:id="@+id/menuJobAra"
+
+        android:title="@string/ara"/>
+
+</menu>
