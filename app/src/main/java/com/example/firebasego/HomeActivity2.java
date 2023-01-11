@@ -118,6 +118,12 @@ public class HomeActivity2 extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void editBtn (View view){
+
+        Intent intent = new Intent(HomeActivity2.this, ProfileEditActivity.class);
+        startActivity(intent);
+        finish();
+    }
     public  void  languageBtn (View view){
         Intent intent = new Intent(HomeActivity2.this, LanguageActivity.class);
         startActivity(intent);

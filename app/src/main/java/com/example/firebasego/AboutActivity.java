@@ -38,11 +38,11 @@ public class AboutActivity extends AppCompatActivity {
     private void initData() {
 
         versionsList=new ArrayList<>();
-        versionsList.add(new Versions("Hammal","içerik"));
-        versionsList.add(new Versions("Hammal2","içerik"));
-        versionsList.add(new Versions("Hammal3","içerik"));
-        versionsList.add(new Versions("Hammal4","içerik"));
-        versionsList.add(new Versions("Hammal5","içerik"));
+        versionsList.add(new Versions("Hammal Nedir?","Hammal bir iş ve işçi bulma uygulamasıdır"));
+        versionsList.add(new Versions("Hammal Ne işe Yarar?","İş veya işçi bulmanıza yarar."));
+        versionsList.add(new Versions("Hammal'ı Neden Tercih Etmeliyim?","Çünkü güzel."));
+        versionsList.add(new Versions("Hammal'da hangi İşleri Bulabilirim? ","Her Türlüsünü Bulursun."));
+        versionsList.add(new Versions("Hammal Güvenilir mi?","Neden olmasın ki."));
     }
     public void back_btn (View view){
         Intent Intent = new Intent(AboutActivity.this, HomeActivity2.class);
