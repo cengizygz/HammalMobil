@@ -57,6 +57,7 @@
 
                 <!--Dark Mode -->
                 <RelativeLayout
+                    android:onClick="editJobbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -73,18 +74,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:text="Night Mode"
+                        android:text="İş Başvuru Oluştur"
                         android:textColor="#fff"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/nightmodeIcon"/>
 
-                    <androidx.appcompat.widget.SwitchCompat
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow_icon"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch"/>
+                        android:layout_centerVertical="true"/>
                 </RelativeLayout>
                 <!--Notification-->
                 <RelativeLayout
@@ -166,6 +166,7 @@
 
                 <!-- security -->
                 <RelativeLayout
+                    android:onClick="jobuploadbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -198,6 +199,7 @@
 
                 <!--Text Size -->
                 <RelativeLayout
+                    android:onClick="jobBtn"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">

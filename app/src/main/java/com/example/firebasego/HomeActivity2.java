@@ -28,7 +28,7 @@ public class HomeActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home2);
+       setContentView(R.layout.activity_home2);
     auth = FirebaseAuth.getInstance();
         recyclerViewCategory();
         recyclerViewPopular();
@@ -37,7 +37,8 @@ public class HomeActivity2 extends AppCompatActivity {
 
 
         binding=ActivityHome2Binding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        View view = binding.getRoot();
+        setContentView(view);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()){
@@ -118,6 +119,12 @@ public class HomeActivity2 extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void jobBtn (View view){
+
+        Intent intent = new Intent(HomeActivity2.this, JobActivity.class);
+        startActivity(intent);
+        finish();
+    }
     public void editBtn (View view){
 
         Intent intent = new Intent(HomeActivity2.this, ProfileEditActivity.class);
@@ -126,6 +133,17 @@ public class HomeActivity2 extends AppCompatActivity {
     }
     public  void  languageBtn (View view){
         Intent intent = new Intent(HomeActivity2.this, LanguageActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public  void  jobuploadbtn (View view){
+        Intent intent = new Intent(HomeActivity2.this, JobUploadActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public  void  editJobbtn (View view){
+        Intent intent = new Intent(HomeActivity2.this, SettingActivity.class);
         startActivity(intent);
         finish();
     }

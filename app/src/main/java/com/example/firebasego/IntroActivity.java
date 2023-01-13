@@ -15,7 +15,7 @@ public class IntroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_activity);
-        Button GirisBtn2 = findViewById(R.id.buttongiris);
+     /*   Button GirisBtn2 = findViewById(R.id.buttongiris);
         GirisBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,9 +29,19 @@ public class IntroActivity extends AppCompatActivity {
                 startActivity(new Intent(IntroActivity.this,SingupActivity.class));
             }
         });
+*/
 
 
 
-
+    }
+    public void GirisTik(View view){
+        Intent intent = new Intent(IntroActivity.this,LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void KayitTik(View view){
+        Intent intent = new Intent(IntroActivity.this,SingupActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
