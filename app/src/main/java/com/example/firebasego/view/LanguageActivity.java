@@ -1,4 +1,4 @@
-package com.example.firebasego;
+package com.example.firebasego.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.example.firebasego.About.Versions;
 import com.example.firebasego.About.VersionsAdapter;
+import com.example.firebasego.R;
 
 import java.util.ArrayList;
 

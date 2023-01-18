@@ -1,4 +1,4 @@
-package com.example.firebasego;
+package com.example.firebasego.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -15,6 +15,11 @@ import com.example.firebasego.Adaptor.CategoryAdaptor;
 import com.example.firebasego.Adaptor.PopularAdaptor;
 import com.example.firebasego.Domain.CategoryDomain;
 import com.example.firebasego.Domain.JobDomain;
+import com.example.firebasego.Home2Fragment;
+import com.example.firebasego.HomeFragment;
+import com.example.firebasego.ProfileFragment;
+import com.example.firebasego.R;
+import com.example.firebasego.SettingFragment;
 import com.example.firebasego.databinding.ActivityHome2Binding;
 import com.google.firebase.auth.FirebaseAuth;
 

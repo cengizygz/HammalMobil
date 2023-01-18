@@ -8,7 +8,7 @@
     android:orientation="vertical"
 
     android:background="@color/white"
-    tools:context=".ProfileEditActivity">
+    tools:context=".view.ProfileEditActivity">
 
     <LinearLayout
         android:id="@+id/layoutToolBar"

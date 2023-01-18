@@ -1,10 +1,12 @@
-package com.example.firebasego;
+package com.example.firebasego.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.firebasego.R;
 
 public class MainActivitySplash extends AppCompatActivity {
     Handler h =new Handler();
@@ -15,7 +17,7 @@ public class MainActivitySplash extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivitySplash.this,IntroActivity.class);
+                Intent i = new Intent(MainActivitySplash.this,JobListActivity.class);
                 startActivity(i);
                 finish();
             }

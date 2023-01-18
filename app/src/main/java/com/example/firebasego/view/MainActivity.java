@@ -1,4 +1,4 @@
-package com.example.firebasego;
+package com.example.firebasego.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.example.firebasego;
+package com.example.firebasego.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.example.firebasego.AddJob.Adapter;
 import com.example.firebasego.AddJob.ItemDataModel;
+import com.example.firebasego.R;
 
 import java.util.ArrayList;
 
