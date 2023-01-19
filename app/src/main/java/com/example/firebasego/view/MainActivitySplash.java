@@ -17,7 +17,7 @@ public class MainActivitySplash extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivitySplash.this,JobListActivity.class);
+                Intent i = new Intent(MainActivitySplash.this,JobList2Activity.class);
                 startActivity(i);
                 finish();
             }

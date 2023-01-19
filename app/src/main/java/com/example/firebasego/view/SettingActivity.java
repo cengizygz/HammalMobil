@@ -25,6 +25,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -99,6 +100,7 @@ public class SettingActivity extends AppCompatActivity {
                             String iletisim = binding.iletisimtext.getText().toString();
                             String tanit = binding.tanittext.getText().toString();
 
+
                             FirebaseUser user = auth.getCurrentUser();
                             String email = user.getEmail();
 
@@ -113,6 +115,7 @@ public class SettingActivity extends AppCompatActivity {
                             postData.put("deneyim",deneyim);
                             postData.put("iletisim",iletisim);
                             postData.put("tanit",tanit);
+                            postData.put("date", FieldValue.serverTimestamp());
 
                             firebaseFirestore.collection("Jobseeker").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
