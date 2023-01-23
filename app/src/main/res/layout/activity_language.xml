@@ -40,7 +40,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Biz Kimiz ?"
+                android:text="Dil Tercihi"
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="20sp" />

@@ -97,7 +97,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/notification_icon"
-                        android:background="@drawable/round_back_night_mode"
+                        android:background="@drawable/round_back_notifications"
                         android:padding="12dp"/>
 
                     <TextView
@@ -129,7 +129,8 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/night_mode_icon"
-                        android:background="@drawable/round_back_notifications"
+                        android:background="@drawable/round_back_private_account"
+
                         android:padding="12dp"/>
 
                     <TextView
@@ -166,7 +167,7 @@
 
                 <!-- security -->
                 <RelativeLayout
-                    android:onClick="jobuploadbtn"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -199,7 +200,7 @@
 
                 <!--Text Size -->
                 <RelativeLayout
-                    android:onClick="jobBtn"
+
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -251,7 +252,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:text="Language"
+                        android:text="Dil"
                         android:textColor="#fff"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/languageIcon"/>
@@ -331,7 +332,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:text="About Us"
+                        android:text="Biz Kimiz"
                         android:textColor="#fff"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/aboutIcon"/>

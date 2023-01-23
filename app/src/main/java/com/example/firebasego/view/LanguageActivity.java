@@ -28,11 +28,11 @@ public class LanguageActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.recycler_view);
         arrayList=new ArrayList<>();
 
-        arrayList.add(new Versions("hammal","naber"));
-        arrayList.add(new Versions("hammal1","naber"));
-        arrayList.add(new Versions("hammal2","naber"));
-        arrayList.add(new Versions("hammal3","naber"));
-        arrayList.add(new Versions("hammal4","naber"));
+        arrayList.add(new Versions("Türkçe","Yalnızca Türkçe dil desteğimiz mevcuttur."));
+     //   arrayList.add(new Versions("hammal1","naber"));
+      //  arrayList.add(new Versions("hammal2","naber"));
+     //   arrayList.add(new Versions("hammal3","naber"));
+      //  arrayList.add(new Versions("hammal4","naber"));
 
         adapter=new VersionsAdapter(arrayList, LanguageActivity.this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

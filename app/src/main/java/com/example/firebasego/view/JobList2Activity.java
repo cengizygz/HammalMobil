@@ -46,7 +46,7 @@ public class JobList2Activity extends AppCompatActivity {
     }
     //.orderBy("date", Query.Direction.DESCENDING)
     private void getData(){
-        firebaseFirestore.collection("Jobseeker").orderBy("adres", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
+        firebaseFirestore.collection("Jobseeker").orderBy("date", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                 if(error !=null){
@@ -61,8 +61,15 @@ public class JobList2Activity extends AppCompatActivity {
                         String isim = (String) data.get("isim");
                         String meslek = (String) data.get("meslek");
 
+                        ////////////////////////////////////////////////////////
+                        String deneyim = (String) data.get("deneyim");
+                        String iletisim = (String) data.get("iletisim");
+                        String ogretim = (String) data.get("ogretim");
+                        String tanit = (String) data.get("tanit");
+                        String yas = (String) data.get("yas");
+                        String calismasaat = (String) data.get("çalışma saat");
 
-                        PostJob postjob = new PostJob(adres,imageUrl,isim,meslek);
+                        PostJob postjob = new PostJob(adres,imageUrl,isim,meslek,deneyim,iletisim,ogretim,tanit,yas,calismasaat);
 
                         postJobArrayList.add(postjob);
                     }

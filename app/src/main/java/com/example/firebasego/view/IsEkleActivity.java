@@ -18,7 +18,8 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.firebasego.databinding.ActivitySettingBinding;
+
+import com.example.firebasego.databinding.ActivityIsekleBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
@@ -34,7 +35,7 @@ import com.google.firebase.storage.UploadTask;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class SettingActivity extends AppCompatActivity {
+public class IsEkleActivity extends AppCompatActivity {
     private FirebaseStorage firebaseStorage;
     private FirebaseAuth auth;
     private FirebaseFirestore firebaseFirestore;
@@ -42,11 +43,11 @@ public class SettingActivity extends AppCompatActivity {
     Uri imageData;
     ActivityResultLauncher<Intent> activityResultLauncher;
     ActivityResultLauncher<String> permissionLauncher;
-    private ActivitySettingBinding binding;
+    private ActivityIsekleBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= ActivitySettingBinding.inflate(getLayoutInflater());
+        binding= ActivityIsekleBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
 
@@ -120,14 +121,14 @@ public class SettingActivity extends AppCompatActivity {
                             firebaseFirestore.collection("Jobseeker").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
-                                    Intent intent = new Intent(SettingActivity.this,HomeActivity2.class);
+                                    Intent intent = new Intent(IsEkleActivity.this,HomeActivity2.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(intent);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(SettingActivity.this,e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(IsEkleActivity.this,e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -136,7 +137,7 @@ public class SettingActivity extends AppCompatActivity {
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(SettingActivity.this,e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(IsEkleActivity.this,e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
                 }
             });
 
@@ -167,14 +168,14 @@ public class SettingActivity extends AppCompatActivity {
                     Intent intentToGallery=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     activityResultLauncher.launch(intentToGallery);
                 } else {
-                    Toast.makeText(SettingActivity.this, "Permission needed!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(IsEkleActivity.this, "Permission needed!", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
     public void jobback (View view){
-        Intent Intent = new Intent(SettingActivity.this, HomeActivity2.class);
+        Intent Intent = new Intent(IsEkleActivity.this, HomeActivity2.class);
         startActivity(Intent);
         finish();
     }
