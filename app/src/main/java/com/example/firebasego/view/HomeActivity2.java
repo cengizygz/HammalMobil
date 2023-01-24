@@ -110,4 +110,9 @@ public class HomeActivity2 extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public  void  editworkerbtn (View view){
+        Intent intent = new Intent(HomeActivity2.this, WorkerEkleActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

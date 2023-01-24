@@ -5,8 +5,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,8 +16,10 @@ import android.widget.Toast;
 
 
 import com.example.firebasego.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         editEmail=(EditText)findViewById(R.id.emailText);
         editSifre=(EditText)findViewById(R.id.sifreText);
-        forgotPassword= findViewById(R.id.SifremiunuttumButton);
+        forgotPassword= findViewById(R.id.forgot_password);
         kayitBtn = findViewById(R.id.KayitOlButton);
 
         // Kayıt ol sekmesi
@@ -52,13 +56,15 @@ public class LoginActivity extends AppCompatActivity {
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,ForgotPassActivity.class));
+                /*
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 View dialogView = getLayoutInflater().inflate(R.layout.dialog_forgot,null);
                 EditText emailBox = dialogView.findViewById(R.id.emailBox);
 
                 builder.setView(dialogView);
                 AlertDialog dialog = builder.create();
-/*
+
                 dialogView.findViewById(R.id.btnReset).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -79,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
-                        dialogView.findViewById(R.id.btnReset).setOnClickListener(new View.OnClickListener() {
+                        dialogView.findViewById(R.id.btcCancel).setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 dialog.dismiss();
@@ -95,11 +101,19 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+
+
+
+
+
+
+        // Kullanıcı kayıtlı ise
         user = auth.getCurrentUser();
         if(user != null){
             Intent intent=new Intent(LoginActivity.this,HomeActivity2.class);
             startActivity(intent);
             finish();
+            ///////
         }
 
     }

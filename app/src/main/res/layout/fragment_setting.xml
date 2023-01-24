@@ -167,7 +167,7 @@
 
                 <!-- security -->
                 <RelativeLayout
-
+                    android:onClick="editworkerbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -184,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:text="Security"
+                        android:text="Çalışan Başvuru Oluştur"
                         android:textColor="#fff"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/securityIcon"/>

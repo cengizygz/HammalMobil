@@ -16,6 +16,20 @@
         android:theme="@style/Theme.FirebaseGo"
         tools:targetApi="31">
         <activity
+            android:name=".view.WorkerEkleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.ForgotPassActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.DetalistJobActivity"
             android:exported="false">
             <meta-data

@@ -3,6 +3,7 @@ package com.example.firebasego.view;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -69,6 +70,9 @@ public class SingupActivity extends AppCompatActivity {
                                             public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()){
                                                 Toast.makeText(SingupActivity.this,"Kayıt Başarılı",Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(SingupActivity.this,LoginActivity.class);
+                                                startActivity(intent);
+                                                finish();
                                             }else
                                                 Toast.makeText(SingupActivity.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                                             }

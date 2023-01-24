@@ -31,47 +31,8 @@
         android:layout_margin="5dp"
         android:textSize="20sp"
         android:id="@+id/recyclerView2"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="usermail text"
-        android:layout_margin="5dp"
-        android:textSize="20sp"
-        android:id="@+id/recyclerView3"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="usermail text"
-        android:layout_margin="5dp"
-        android:textSize="20sp"
-        android:id="@+id/recyclerView4"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="usermail text"
-        android:layout_margin="5dp"
-        android:textSize="20sp"
-        android:id="@+id/recyclerView5"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="usermail text"
-        android:layout_margin="5dp"
-        android:textSize="20sp"
-        android:id="@+id/recyclerView6"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="usermail text"
-        android:layout_margin="5dp"
-        android:textSize="20sp"
-        android:id="@+id/recyclerView7"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="usermail text"
-        android:layout_margin="5dp"
-        android:textSize="20sp"
-        android:id="@+id/recyclerView8"/>
+
+
+
 
 </LinearLayout>
