@@ -74,7 +74,7 @@ public class HomeActivity2 extends AppCompatActivity {
         finish();
     }
     public void iscilistbtn(View view){
-        Intent intent = new Intent(HomeActivity2.this, JobList2Activity.class);
+        Intent intent = new Intent(HomeActivity2.this, WorkerListActivity.class);
         startActivity(intent);
         finish();
     }
